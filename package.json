@@ -1,0 +1,24 @@
+{
+  "name": "yt-to-gpt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "openai": "nodemon openai.js",
+    "ts": "nodemon transscript/index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "figlet": "^1.5.2",
+    "inquirer": "^9.1.4",
+    "nanospinner": "^1.1.0",
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.21",
+    "openai": "^3.2.1",
+    "phin": "^3.7.0",
+    "youtube-transcript": "^1.0.4"
+  }
+}
