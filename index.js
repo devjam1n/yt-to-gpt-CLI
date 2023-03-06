@@ -16,10 +16,10 @@ figlet("YT-GPT", function (err, data) {
   console.log(data)
 });
 await sleep(250)
-console.log(chalk.blue.bold("Af Benjamin Nielsen\n"))
-const url = await askUser("Hvad er url-addressen på youtube videoen?")
+console.log(chalk.blue.bold("By benamager\n"))
+const url = await askUser("URL-address of youtube video?")
 
-const spinner = createSpinner('Indsamler video information...').start()
+const spinner = createSpinner('Gathering video transcript...').start()
 
 try {
   const transcript = await getTranscript({ url: url });
@@ -36,7 +36,7 @@ try {
     return output;
   }
 
-  const spinner2 = createSpinner('Genererer resumé').start()
+  const spinner2 = createSpinner('Compiling summary...').start()
   const readyTransscript = convertTranscript(transcript)
 
   askOpenAI({ prompt: readyTransscript, spinner: spinner2 })
