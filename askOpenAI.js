@@ -16,7 +16,7 @@ export async function askOpenAI({ prompt, spinner }) {
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
-        { "role": "system", "content": "The following is a transscript of a youtube video. Give a quick summary" },
+        { "role": "system", "content": "The following is a video transscript . List all steps in order to complete the easter egg." },
         { "role": "user", "content": prompt }
       ]
     });

@@ -6,6 +6,7 @@ import sleep from "./components/sleep.js";
 import askUser from "./components/askUser.js";
 import { createSpinner } from 'nanospinner'
 
+
 console.clear()
 figlet("YT-GPT", function (err, data) {
   if (err) {
@@ -39,7 +40,9 @@ try {
   const spinner2 = createSpinner('Compiling summary...').start()
   const readyTransscript = convertTranscript(transcript)
 
-  askOpenAI({ prompt: readyTransscript, spinner: spinner2 })
+  console.log(readyTransscript)
+
+  //askOpenAI({ prompt: readyTransscript, spinner: spinner2 })
 
 } catch (error) {
 
